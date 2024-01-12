@@ -25,27 +25,20 @@ function Login(){
       }
     }
   }
-  const getQuote = () => {
-    axios.get('https://api.quotable.io/random')
-    .then(res => {
-      console.log(res.data.content)
-    }).catch(err => {
-      console.log(err)
-    })
-  }
+
 
   return (
   <>
   <div className="LoginForm">
       <form onSubmit={handleSubmit}>
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email"/>
-          <label for="password">Password</label>
+          <label htmlFor="password">Password</label>
           <input value={pass} onChange={(e) => setPass(e. target.value)} type="password" placeholder="*********" id="password" name="password"/>
           <button type="submit">Login</button>
       </form>
   </div>
-  <button type="button" onClick={getQuote}>Click me</button>
+  <button type="button" >Click me</button>
   </>
   )
 }
