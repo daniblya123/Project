@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import axios from "axios"
+import "./LoginLayout.css"
 
 function Login(){
   const [email, setEmail] = useState('');
@@ -29,7 +30,8 @@ function Login(){
 
   return (
   <>
-  <div className="LoginForm">
+  <div className="Login">
+    <div className="LoginForm">
       <form onSubmit={handleSubmit}>
           <label htmlFor="email">Email</label>
           <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="youremail@gmail.com" id="email" name="email"/>
@@ -37,6 +39,7 @@ function Login(){
           <input value={pass} onChange={(e) => setPass(e. target.value)} type="password" placeholder="*********" id="password" name="password"/>
           <button type="submit">Login</button>
       </form>
+    </div>
   </div>
   <button type="button" >Click me</button>
   </>
